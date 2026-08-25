@@ -2,6 +2,7 @@ import warnings
 import numpy as np
 import pandas as pd
 import matplotlib
+import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
 import platform
 import re
