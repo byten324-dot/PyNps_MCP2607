@@ -542,7 +542,7 @@ if company_name:
             use_container_width=True
         )
 
-    else:
+        else:
         st.subheader('검색결과가 없습니다')
 
 
