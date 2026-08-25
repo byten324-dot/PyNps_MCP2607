@@ -514,6 +514,26 @@ if company_name:
 
         fig, ax = plt.subplots(1, 2)
 
+        p1 = ax[0].bar(x=["Average", "Your Company"], height=(comp_output.iloc[0, 0], info['월급여추정']), width=0.7)
+        ax[0].bar_label(p1, fmt='%d')
+        p1[0].set_color('black')
+        p1[1].set_color('red')
+        ax[0].set_title('Monthly Salary')
+
+        p2 = ax[1].bar(x=["Average", "Your Company"], height=(comp_output.iloc[1, 0], info['연간급여추정']), width=0.7)
+        p2[0].set_color('black')
+        p2[1].set_color('red')
+        ax[1].bar_label(p2, fmt='%d')
+        ax[1].set_title('Yearly Salary')
+
+        ax[0].tick_params(axis='both', which='major', labelsize=8, rotation=0)
+        ax[0].tick_params(axis='both', which='minor', labelsize=6)
+        ax[1].tick_params(axis='both', which='major', labelsize=8)
+        ax[1].tick_params(axis='both', which='minor', labelsize=6)
+
+
+        st.pyplot(fig)
+
 
 
 
