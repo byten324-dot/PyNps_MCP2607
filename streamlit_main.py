@@ -117,11 +117,11 @@ file_path = r'https://www.dropbox.com/scl/fi/q05nabk8r0822dy8q1kew/_-_20251124.c
 
 
 @st.cache_resource    # 동일 함수 반복 호출되면, 매번 실행하지 않고, 마지막으로 실행된 결과를 리턴게 함.
-def read_pensiondata():  
+def read_pensionData():  
     data = pensionData(file_path)
     return data
 
-data = read_pensiondata()
+data = read_pensionData()
 
 company_name = st.text_input("회사명을 입력해 주세요", placeholder="검색할 회사명 입력")
 
